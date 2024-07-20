@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import image1 from './imgs/first-slider.jpg';
+import image1 from './imgs/white-slider1.jpg';
 import image2 from './imgs/second-slider.jpg';
-import image3 from './imgs/third-slider.jpg';
+import image3 from './imgs/white-slider2.jpg';
+import image4 from './imgs/white-slide3.jpg';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [image1, image2, image3];
+  const slides = [image1, image2, image3, image4];
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -16,20 +17,42 @@ const Slider = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative w-screen h-[70vh] overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           style={{ backgroundImage: `url(${slide})` }}
         >
-          <div className="absolute bottom-5 left-5 text-white text-xl bg-black bg-opacity-50 p-2">
-            {index === 0 && '#01 EXTERIOR BUILDING'}
-            {index === 1 && '#02 AMERICAN BUILDING'}
-            {index === 2 && "#03 LOUIE'S RESIDENCES"}
-          </div>
         </div>
       ))}
+      <div className="absolute inset-0 flex items-center justify-start pl-32">
+        <div className="text-white max-w-md space-y-4">
+          <h1 className="text-7xl font-bold text-gray-900" style={{ letterSpacing: '-0.01em' }}>
+            Crafting spaces that <br />
+            <span className="text-red-600">inspire.</span>
+          </h1>
+          <p className="text-gray-900 text-xl typewriter">
+            Turn your vision into inspiring spaces.
+          </p>
+          <div className="flex items-center text-gray-900 space-x-2 text-lg">
+            <a href="#learn-more" className="flex items-center">
+              <span>Learn More</span>
+              <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            className={`w-6 h-1 ${index === currentSlide ? 'bg-white' : 'bg-gray-500'}`}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };
