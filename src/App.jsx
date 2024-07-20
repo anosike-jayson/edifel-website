@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './navBar';
 import Slider from './Slider';
 import Statistics from './Statistics';
+import About from './About';
 import './App.css';
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
     <div>
     <NavBar />
     <Slider />
-    <Statistics/>
+    <About/>
     </div>
   );
 };

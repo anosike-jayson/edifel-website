@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Slider.css';
 import image1 from './imgs/first-slider.jpg';
 import image2 from './imgs/second-slider.jpg';
 import image3 from './imgs/third-slider.jpg';
@@ -11,23 +10,23 @@ const Slider = () => {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(slideInterval);
   }, [slides.length]);
 
   return (
-    <div className="slider">
+    <div className="relative w-screen h-[70vh] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`slide ${index === currentSlide ? 'active' : ''}`}
+          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           style={{ backgroundImage: `url(${slide})` }}
         >
-          <div className="caption">
+          <div className="absolute bottom-5 left-5 text-white text-xl bg-black bg-opacity-50 p-2">
             {index === 0 && '#01 EXTERIOR BUILDING'}
             {index === 1 && '#02 AMERICAN BUILDING'}
-            {index === 2 && '#03 LOUIE\'S RESIDENCES'}
+            {index === 2 && "#03 LOUIE'S RESIDENCES"}
           </div>
         </div>
       ))}
