@@ -1,24 +1,45 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import NavBar from './navBar';
 import Slider from './Slider';
-import Statistics from './Statistics';
 import About from './About';
 import Services from './Services';
-import Semifooter from './SemiFooter';
 import Portfolio from './Portfolio';
+import Semifooter from './SemiFooter';
+import LearnMore from './LearnMore'; // Import LearnMore component
 import './App.css';
+
+const AppContent = () => {
+  const location = useLocation();
+  const isLearnMorePage = location.pathname === '/learnmore';
+
+  return (
+    <div>
+      <NavBar />
+      <Slider />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/learnmore" element={<LearnMore />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        {/* Add more routes as needed */}
+      </Routes>
+      {!isLearnMorePage && (
+        <>
+          <Services />
+          <Portfolio />
+        </>
+      )}
+      <Semifooter />
+    </div>
+  );
+};
 
 const App = () => {
   return (
-    <div>
-    <NavBar />
-    <Slider />
-    <About />
-    <Services />
-    <Portfolio />
-    <Semifooter />
-    
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
   );
 };
 
