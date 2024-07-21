@@ -29,9 +29,9 @@ const About = () => {
             <hr className="border-gray-300 w-full" />
             <p className="text-lg max-w-lg">
               At ediFel Designs our main focus is to design with a collaborative approach. Communication with the owner, bringing their vision to life and coordinating with other designers.
-              We are forward thinkers and entrepreneurs. Our designs consider efficiency as the main goal. We are always looking to bring new ways to achieve the same result, in the most efficient and green way a possibility.
+              We are forward thinkers and entrepreneurs. Our designs consider efficiency as the main goal. We are always looking to bring new ways to achieve the same result, in the most efficient and green way possible.
             </p>
-            <a href="#learn-more" className="inline-flex items-center text-blue-500 hover:text-blue-700">
+            <a href="/learnmore" className="inline-flex items-center text-blue-500 hover:text-blue-700">
               Learn More
               <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
