@@ -6,7 +6,7 @@ import About from './About';
 import Services from './Services';
 import Portfolio from './Portfolio';
 import Semifooter from './SemiFooter';
-import LearnMore from './LearnMore'; // Import LearnMore component
+import LearnMore from './LearnMore'; 
 import './App.css';
 
 const AppContent = () => {
@@ -22,7 +22,6 @@ const AppContent = () => {
         <Route path="/learnmore" element={<LearnMore />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        {/* Add more routes as needed */}
       </Routes>
       {!isLearnMorePage && (
         <>
