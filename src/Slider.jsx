@@ -26,25 +26,26 @@ const Slider = () => {
         >
         </div>
       ))}
-      <div className="absolute inset-0 flex items-center justify-start pl-32">
+      <div className="absolute inset-0 flex items-center justify-start pl-8 md:pl-32">
         <div className="text-white max-w-md space-y-4">
-          <h1 className="text-7xl font-bold text-gray-900" style={{ letterSpacing: '-0.01em' }}>
+          <h1 className="text-3xl md:text-7xl font-bold text-gray-900" style={{ letterSpacing: '-0.01em' }}>
             Crafting spaces that <br />
             <span className="text-red-600">inspire.</span>
           </h1>
-          <p className="text-gray-900 text-xl typewriter">
+          <p className="text-gray-900 text-lg md:text-xl typewriter">
             Turn your vision into inspiring spaces.
           </p>
-          <div className="flex items-center text-gray-900 space-x-2 text-lg">
+          <div className="flex items-center text-gray-900 space-x-2 text-base md:text-lg">
             <a href="#learn-more" className="flex items-center">
               <span>Learn More</span>
-              <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4 md:w-6 md:h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
           </div>
         </div>
       </div>
+
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <div
