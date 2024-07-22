@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import NavBar from './navBar';
-import Slider from './Slider';
-import About from './About';
-import Services from './Services';
-import Portfolio from './Portfolio';
-import Semifooter from './SemiFooter';
-import LearnMore from './LearnMore'; 
+import { BrowserRouter as Router, Route, Routes, useLocation, Link } from 'react-router-dom';
+import NavBar from './components/navBar';
+import Slider from './components/Slider';
+import About from './components/About';
+import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Semifooter from './components/SemiFooter';
+import LearnMore from './pages/LearnMore';
 import './App.css';
 
 const AppContent = () => {
@@ -16,7 +16,7 @@ const AppContent = () => {
   return (
     <div>
       <NavBar />
-      <Slider />
+      {!isLearnMorePage && <Slider />}
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/learnmore" element={<LearnMore />} />
@@ -29,7 +29,7 @@ const AppContent = () => {
           <Portfolio />
         </>
       )}
-      <Semifooter />
+      {!isLearnMorePage && <Semifooter />}
     </div>
   );
 };

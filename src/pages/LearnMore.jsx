@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import ceoImage from './imgs/ceo.jpg'; // Ensure the path is correct
+import ceoImage from '../imgs/ceo.jpg'; // Ensure the path is correct
 
 const LearnMore = () => {
   const { ref: contentRef, inView: contentInView } = useInView({ triggerOnce: true, threshold: 0.1 });

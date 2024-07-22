@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import aboutImage from './imgs/third-slider.jpg';
+import aboutImage from '../imgs/third-slider.jpg';
 
 const About = () => {
   const { ref: imageRef, inView: imageInView } = useInView({ triggerOnce: true, threshold: 0.1 });

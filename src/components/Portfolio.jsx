@@ -1,8 +1,8 @@
 import React from 'react';
-import image1 from './imgs/white-slider1.jpg';
-import image2 from './imgs/second-slider.jpg';
-import image3 from './imgs/white-slider2.jpg';
-import image4 from './imgs/white-slide3.jpg';
+import image1 from '../imgs/white-slider1.jpg';
+import image2 from '../imgs/second-slider.jpg';
+import image3 from '../imgs/white-slider2.jpg';
+import image4 from '../imgs/white-slide3.jpg';
 import { FaArrowRight } from 'react-icons/fa'; // Import the arrow icon
 
 const portfolioData = [

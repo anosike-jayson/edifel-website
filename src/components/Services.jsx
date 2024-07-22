@@ -1,5 +1,5 @@
 import React from 'react';
-import image4 from './imgs/Electricity.jpg';
+import image4 from '../imgs/Electricity.jpg';
 
 const servicesData = [
   {
