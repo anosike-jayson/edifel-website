@@ -35,6 +35,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Adjust this value as needed */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .typewriter {
+    animation:typewriter 4s steps(40, end) 1s 1 normal typewriter 4s steps(37, end) 1s 1 normal both,
+             blinkTextCursor 500ms steps(37, end) infinite normal,
+             hideCursor 4s steps(37, end) 1s 1 normal both;
+    width: 100%;
+  }
+}
+
 @keyframes blink {
   0% {
     border-right: 2px solid transparent;
@@ -47,12 +67,23 @@
   }
 }
 
+@keyframes hideCursor {
+  0%, 90% {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+
 .typewriter {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid rgb(255, 255, 255); 
-  animation: typewriter 4s steps(37, end) 1s 1 normal both, blink 500ms steps(37, end) infinite;
+  animation: typewriter 4s steps(37, end) 1s 1 normal both,
+             blinkTextCursor 500ms steps(37, end) infinite normal,
+             hideCursor 4s steps(37, end) 1s 1 normal both;
   width: fit-content;
 }
 
@@ -77,11 +108,11 @@
 }
 
 .animate-slide-in {
-  animation: slide-in 1s ease-out;
+  animation: slide-in 0.5s ease-out;
 }
 
 .animate-fade-in {
-  animation: fade-in 3s ease-out;
+  animation: fade-in 0.5s ease-out;
 }
 
 
