@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 const portfolioData = [
     {
         image: '/Residential/Garfield/IMG_9157.jpg',
         description: 'Garfield Multi-family',
-        link: 'selectedworks' 
+        link: '/selectedworks' 
     },
     {
         image: '/Residential/Glenview/IMG_8982.jpg',
         description: 'Glenview Residence',
-        link: 'selectedworks'
+        link: '/selectedworks'
     },
     {
         image: '/Residential/Green/IMG_9144.jpg',
         description: 'Green Street',
-        link: 'selectedworks'
+        link: '/selectedworks'
     },
     {
         image: '/Residential/Lake/image2.png',
         description: 'Lake Plains',
-        link: 'selectedworks'
+        link: '/selectedworks'
     },
 ];
 
@@ -40,12 +41,12 @@ const Portfolio = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
                                 <div className="absolute inset-0 p-4 flex flex-col justify-end space-y-2">
                                     <p className="text-white text-lg">{item.description}</p>
-                                    <a href={item.link} className="flex items-center text-white text-lg">
+                                    <Link to={item.link} className="flex items-center text-white text-lg">
                                         <span>Details</span>
                                         <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
