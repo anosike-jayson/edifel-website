@@ -23,16 +23,15 @@ const MainContent = () => {
 
 const AppContent = () => {
   const location = useLocation();
-  const isLearnMorePage = location.pathname === '/learnmore';
 
   return (
     <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<MainContent />} />
-        <Route path="/learnmore" element={<LearnMore />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/learnmore" element={<LearnMore/>} />
       </Routes>
     </div>
   );
