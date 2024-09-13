@@ -32,7 +32,7 @@ const Portfolio = () => {
     return (
         <section className="p-16" id="portfolio">
             <header className="text-center mb-8">
-                <h2 className="text-4xl font-bold text-gray-800">PORTFOLIO</h2>
+                <h2 className="text-4xl font-bold text-gray-800">SELECTED WORKS</h2>
             </header>
             <div className="relative max-w-screen-xl mx-auto">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

@@ -48,7 +48,7 @@ const Services = () => {
             <img src={service.icon} alt={service.title} className="w-12 h-12 mb-4" />
             <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
             <p className="text-lg text-gray-600 mb-4">{service.description}</p>
-            <a href={`#${service.id}`} className="inline-flex items-center text-blue-500 hover:text-blue-700">
+            <a href={`#${service.id}`} className="inline-flex items-center text-green-500 hover:text-blue-700">
               More
               <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
