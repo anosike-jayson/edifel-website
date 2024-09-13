@@ -30,7 +30,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-transparent py-7 px-4 md:px-20 shadow-lg border-b border-transparent transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-transparent py-4 px-4 md:px-20 shadow-lg border-b border-transparent transition-transform duration-300 ${
         showNavBar ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -46,12 +46,11 @@ const NavBar = () => {
           {isNavOpen ? <FaTimes /> : <FaBars />}
         </button>
         <div className={`nav-links space-x-8 md:flex ${isNavOpen ? 'block' : 'hidden'} md:block`}>
-          <Link to="/" className="text-black text-2xl hover:text-green-700">Home</Link>
-          <Link to="/about" className="text-black text-2xl hover:text-green-700">About</Link>
-          <Link to="/services" className="text-black text-2xl hover:text-green-700">Services</Link>
-          <Link to="/portfolio" className="text-black text-2xl hover:text-green-700">Portfolio</Link>
-          <Link to="/contact" className="text-black text-2xl hover:text-green-700">Contact Us</Link>
-          <Link to="/learnmore" className="text-black text-2xl hover:text-green-700">Learn more</Link>
+          <Link to="/" className="text-black text-xl hover:text-green-700">Home</Link>
+          <Link to="/about" className="text-black text-xl hover:text-green-700">About</Link>
+          <Link to="/selectedworks" className="text-black text-xl hover:text-green-700">Portfolio</Link>
+          <Link to="/services" className="text-black text-xl hover:text-green-700">Services</Link>
+          <Link to="/contact" className="text-black text-xl hover:text-green-700">Contact Us</Link>
         </div>
       </div>
     </nav>

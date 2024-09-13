@@ -9,9 +9,9 @@ const servicesList = [
 ];
 
 const contactInfo = {
-  email: 'contact@example.com',
-  location: '123 Main St, City, Country',
-  phone: '+1234567890'
+  email: 'info@edifeldesigns.com',
+  location: '123 Main St, City, Country.',
+  phone: '+1 734-358-5142'
 };
 
 const Semifooter = () => {
