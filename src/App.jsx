@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import NavBar from './components/navBar';
 import Slider from './components/Slider';
 import About from './components/About';
@@ -9,6 +9,18 @@ import Semifooter from './components/SemiFooter';
 import LearnMore from './pages/LearnMore';
 import './App.css';
 
+const MainContent = () => {
+  return (
+    <>
+      <Slider />
+      <About />
+      <Services />
+      <Portfolio />
+      <Semifooter />
+    </>
+  );
+};
+
 const AppContent = () => {
   const location = useLocation();
   const isLearnMorePage = location.pathname === '/learnmore';
@@ -16,20 +28,12 @@ const AppContent = () => {
   return (
     <div>
       <NavBar />
-      {!isLearnMorePage && <Slider />}
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/" element={<MainContent />} />
         <Route path="/learnmore" element={<LearnMore />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
-      {!isLearnMorePage && (
-        <>
-          <Services />
-          <Portfolio />
-        </>
-      )}
-      {!isLearnMorePage && <Semifooter />}
     </div>
   );
 };
