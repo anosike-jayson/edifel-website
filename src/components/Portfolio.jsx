@@ -1,30 +1,24 @@
 import React from 'react';
-import image1 from '../imgs/white-slider1.jpg';
-import image2 from '../imgs/second-slider.jpg';
-import image3 from '../imgs/white-slider2.jpg';
-import image4 from '../imgs/white-slide3.jpg';
-import { FaArrowRight } from 'react-icons/fa'; // Import the arrow icon
-
 const portfolioData = [
     {
-        image: image1,
-        description: 'Brimingham palace 2028, fossils remain...',
-        link: '#portfolio' 
+        image: '/Residential/Garfield/IMG_9157.jpg',
+        description: 'Garfield Multi-family',
+        link: 'selectedworks' 
     },
     {
-        image: image2,
-        description: 'Brimingham palace 2028, fossils remain...',
-        link: '#portfolio'
+        image: '/Residential/Glenview/IMG_8982.jpg',
+        description: 'Glenview Residence',
+        link: 'selectedworks'
     },
     {
-        image: image3,
-        description: 'Brimingham palace 2028, fossils remain...',
-        link: '#portfolio'
+        image: '/Residential/Green/IMG_9144.jpg',
+        description: 'Green Street',
+        link: 'selectedworks'
     },
     {
-        image: image4,
-        description: 'Brimingham palace 2028, fossils remain...',
-        link: '#portfolio'
+        image: '/Residential/Lake/image2.png',
+        description: 'Lake Plains',
+        link: 'selectedworks'
     },
 ];
 
@@ -47,7 +41,7 @@ const Portfolio = () => {
                                 <div className="absolute inset-0 p-4 flex flex-col justify-end space-y-2">
                                     <p className="text-white text-lg">{item.description}</p>
                                     <a href={item.link} className="flex items-center text-white text-lg">
-                                        <span>More</span>
+                                        <span>Details</span>
                                         <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                         </svg>

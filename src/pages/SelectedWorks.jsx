@@ -1,9 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { OfficeBuildingIcon, HomeIcon } from '@heroicons/react/outline';
+import Semifooter from '../components/SemiFooter'
 
 const SelectedWorks = () => {
-  const [selectedCategory, setSelectedCategory] = useState('commercial');
-  const [selectedCommercialCollection, setSelectedCommercialCollection] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('residential');
+  const [selectedResidentialCollection, setSelectedResidentialCollection] = useState(null);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const sidebarRef = useRef(null);
 
+  // Close sidebar when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsCollapsed(true);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleSidebarToggle = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   // Sample collections for commercial and residential works
   const residentialCollections = [
     {
@@ -63,7 +82,7 @@ const SelectedWorks = () => {
     // Add more collections as needed
   ];
 
-  const residentialImages = [
+  const commercialImages = [
     { id: 1, src: '/images/residential1.jpg' },
     { id: 2, src: '/images/residential2.jpg' },
     { id: 3, src: '/images/residential3.jpg' },
@@ -89,15 +108,15 @@ const SelectedWorks = () => {
     </div>
   );
 
-  const renderCommercial = () => {
-    if (selectedCommercialCollection) {
+  const renderResidential = () => {
+    if (selectedResidentialCollection) {
       return (
         <div>
-          <button onClick={() => setSelectedCommercialCollection(null)} className="mb-4 text-blue-500">
-            ← Back to Commercial Collections
+          <button onClick={() => setSelectedResidentialCollection(null)} className="mb-4 text-blue-500">
+            ← Back to Residential Collections
           </button>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-fr">
-            {selectedCommercialCollection.subCollections.map((image) => (
+            {selectedResidentialCollection.subCollections.map((image) => (
               <ImageCard
                 key={image.id}
                 image={image}
@@ -116,7 +135,7 @@ const SelectedWorks = () => {
             key={collection.id}
             image={collection.images[0]}
             name={collection.name}
-            onClick={() => setSelectedCommercialCollection(collection)}
+            onClick={() => setSelectedResidentialCollection(collection)}
           />
         ))}
       </div>
@@ -124,12 +143,12 @@ const SelectedWorks = () => {
   };
 
   const renderImages = () => {
-    if (selectedCategory === 'commercial') {
-      return renderCommercial();
+    if (selectedCategory === 'residential') {
+      return renderResidential();
     }
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-fr">
-        {residentialImages.map((image) => (
+        {commercialImages.map((image) => (
           <ImageCard
             key={image.id}
             image={image}
@@ -141,47 +160,57 @@ const SelectedWorks = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="relative flex h-screen">
       {/* Sidebar */}
-      <div className="w-64 bg-gray-100 h-full p-6 fixed top-16">
+      <div
+        ref={sidebarRef}
+        className={`bg-gray-100 h-full p-6 fixed top-16 z-40 transition-all duration-300 ease-in-out ${isCollapsed ? 'w-20 shadow-none' : 'w-64 shadow-2xl'
+          }`}
+      >
+        <button
+          onClick={handleSidebarToggle}
+          className="p-2 mb-4 bg-gray-300 rounded"
+        >
+          {isCollapsed ? '→' : '←'} {/* Toggle button */}
+        </button>
+
         <ul>
+          <li
+            onClick={() => {
+              setSelectedCategory('residential');
+              setSelectedResidentialCollection(null);
+            }}
+            className={`cursor-pointer p-3 mb-2 rounded flex items-center ${selectedCategory === 'residential'
+                ? 'bg-green-500 text-white'
+                : 'text-gray-700 hover:bg-gray-200'
+              }`}
+          >
+            <HomeIcon className="h-6 w-6" /> {/* Icon */}
+            {!isCollapsed && ' Residential'} {/* Name when expanded */}
+          </li>
           <li
             onClick={() => {
               setSelectedCategory('commercial');
               setSelectedCommercialCollection(null);
             }}
-            className={`cursor-pointer p-3 mb-2 rounded ${
-              selectedCategory === 'commercial'
+            className={`cursor-pointer p-3 mb-2 rounded flex items-center ${selectedCategory === 'commercial'
                 ? 'bg-green-500 text-white'
                 : 'text-gray-700 hover:bg-gray-200'
-            }`}
+              }`}
           >
-            Commercial
-          </li>
-          <li
-            onClick={() => {
-              setSelectedCategory('residential');
-              setSelectedCommercialCollection(null);
-            }}
-            className={`cursor-pointer p-3 mb-2 rounded ${
-              selectedCategory === 'residential'
-                ? 'bg-green-500 text-white'
-                : 'text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            Residential
+            <OfficeBuildingIcon className="h-6 w-6" /> {/* Icon */}
+            {!isCollapsed && ' Commercial'} {/* Name when expanded */}
           </li>
         </ul>
       </div>
-  
 
 
       {/* Main content */}
-      <div className="flex-grow p-6 mt-16 ml-64">
+      <div className="flex-grow p-6 mt-16 ml-20">
         <h1 className="text-2xl font-semibold mb-6">
-          {selectedCategory === 'commercial' && !selectedCommercialCollection ? 'Commercial Collections' :
-            selectedCategory === 'commercial' && selectedCommercialCollection ? selectedCommercialCollection.name :
-              'Residential Works'}
+          {selectedCategory === 'residential' && !selectedResidentialCollection ? 'Residential Works' :
+            selectedCategory === 'residential' && selectedResidentialCollection ? selectedResidentialCollection.name :
+              'Commercial Collection'}
         </h1>
         {renderImages()}
       </div>

@@ -38,7 +38,7 @@ const Services = () => {
         <div className="md:col-span-1 md:row-span-2 flex flex-col justify-center items-center">
           {/* Replace the heading with an image */}
           <img
-            src={image4} // Replace with your actual image URL
+            src= '/Residential/Garfield/IMG_9175.jpg' // Replace with your actual image URL
             alt="Our Services Overview"
             className="w-full h-auto object-cover rounded-lg shadow-md"
           />
