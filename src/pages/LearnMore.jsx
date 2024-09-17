@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import img1 from '../imgs/About.jpg';
+import img2 from '../imgs/About-Image.jpg';
+import SemiFooter from '../components/SemiFooter';  
 
 // Custom hook for typewriter effect
 const useTypewriterEffect = (text, inView, speed = 50) => {
@@ -21,6 +24,10 @@ const useTypewriterEffect = (text, inView, speed = 50) => {
 };
 
 const LearnMore = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: collaborationRef, inView: collaborationInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: sustainabilityRef, inView: sustainabilityInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: innovationRef, inView: innovationInView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -43,60 +50,69 @@ const LearnMore = () => {
     },
   ];
 
-  // Use the custom typewriter effect hook
   const collaborationText = useTypewriterEffect(sections[0].content, collaborationInView, 30);
   const sustainabilityText = useTypewriterEffect(sections[1].content, sustainabilityInView, 30);
   const innovationText = useTypewriterEffect(sections[2].content, innovationInView, 30);
 
   return (
-    <section className="relative flex flex-col justify-center items-center p-16 bg-gray-100 space-y-16">
-      <header className="text-center mb-10 mt-16"> {/* Added 'mt-16' to push it further down */}
-        <h2 className="text-4xl font-bold text-gray-800">About Us</h2>
+    <section className="relative flex flex-col justify-center items-center p-4 bg-gray-100 space-y-16">
+      <header className="text-center mb-10 mt-16">
+        <h2 className="text-4xl font-bold text-green-700">About Us</h2>
       </header>
 
-      <div className="max-w-screen-xl mx-auto flex flex-col space-y-16">
-        {/* Collaboration Section */}
-        <div
-          ref={collaborationRef}
-          className={`flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 w-full transition-all duration-1000 transform ${collaborationInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
-          <div className="flex flex-col items-center justify-center w-full lg:w-1/3">
-            <h2 className="text-3xl font-bold text-gray-800">{sections[0].title}</h2>
-            <div className="mt-4 text-6xl transition-transform duration-500 hover:scale-110">{sections[0].icon}</div>
-          </div>
-          <div className="flex flex-col justify-center w-full lg:w-2/3">
+      <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row space-y-16 lg:space-y-0 lg:space-x-8">
+        {/* Left Side: Content Sections */}
+        <div className="flex flex-col space-y-16 w-full lg:w-2/3">
+          {/* Collaboration Section */}
+          <div
+            ref={collaborationRef}
+            className={`flex flex-col items-start space-y-8 w-full transition-all duration-1000 transform ${collaborationInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+          >
+            <h2 className="text-3xl font-bold text-green-700">{sections[0].title}</h2>
+            <div className="mt-4 text-6xl">{sections[0].icon}</div>
             <p className="text-lg max-w-lg text-gray-700 transition-opacity duration-700">{collaborationText}</p>
           </div>
-        </div>
 
-        {/* Sustainability Section */}
-        <div
-          ref={sustainabilityRef}
-          className={`flex flex-col-reverse lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 w-full transition-all duration-1000 transform ${sustainabilityInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
-          <div className="flex flex-col justify-center w-full lg:w-2/3">
+          {/* Sustainability Section */}
+          <div
+            ref={sustainabilityRef}
+            className={`flex flex-col items-start space-y-8 w-full transition-all duration-1000 transform ${sustainabilityInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+          >
+            <h2 className="text-3xl font-bold text-green-700">{sections[1].title}</h2>
+            <div className="mt-4 text-6xl">{sections[1].icon}</div>
             <p className="text-lg max-w-lg text-gray-700 transition-opacity duration-700">{sustainabilityText}</p>
           </div>
-          <div className="flex flex-col items-center justify-center w-full lg:w-1/3">
-            <h2 className="text-3xl font-bold text-gray-800">{sections[1].title}</h2>
-            <div className="mt-4 text-6xl transition-transform duration-500 hover:scale-110">{sections[1].icon}</div>
-          </div>
-        </div>
 
-        {/* Innovation Section */}
-        <div
-          ref={innovationRef}
-          className={`flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 w-full transition-all duration-1000 transform ${innovationInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
-          <div className="flex flex-col items-center justify-center w-full lg:w-1/3">
-            <h2 className="text-3xl font-bold text-gray-800">{sections[2].title}</h2>
-            <div className="mt-4 text-6xl transition-transform duration-500 hover:scale-110">{sections[2].icon}</div>
-          </div>
-          <div className="flex flex-col justify-center w-full lg:w-2/3">
+          {/* Innovation Section */}
+          <div
+            ref={innovationRef}
+            className={`flex flex-col items-start space-y-8 w-full transition-all duration-1000 transform ${innovationInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+          >
+            <h2 className="text-3xl font-bold text-green-700">{sections[2].title}</h2>
+            <div className="mt-4 text-6xl">{sections[2].icon}</div>
             <p className="text-lg max-w-lg text-gray-700 transition-opacity duration-700">{innovationText}</p>
           </div>
         </div>
+
+        {/* Right Side: Demo Images */}
+        <div className="w-full lg:w-1/3 space-y-8">
+          {/* First Image */}
+          <img
+            src={img1}
+            alt="Design concept"
+            className="w-full h-auto object-cover rounded-lg shadow-lg"
+          />
+          {/* Second Image */}
+          <img
+            src={img2}
+            alt="Another design concept"
+            className="w-full h-auto object-cover rounded-lg shadow-lg"
+          />
+        </div>
       </div>
+      
+      {/* Footer */}
+      <SemiFooter /> {/* Adding the SemiFooter at the bottom */}
     </section>
   );
 };
