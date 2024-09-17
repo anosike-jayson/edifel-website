@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import img1 from '../imgs/About.jpg';
-import img2 from '../imgs/About-Image.jpg';  // Importing the second image
+import img2 from '../imgs/About-Image.jpg';
+import SemiFooter from '../components/SemiFooter';  
 
 // Custom hook for typewriter effect
 const useTypewriterEffect = (text, inView, speed = 50) => {
@@ -23,6 +24,10 @@ const useTypewriterEffect = (text, inView, speed = 50) => {
 };
 
 const LearnMore = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { ref: collaborationRef, inView: collaborationInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: sustainabilityRef, inView: sustainabilityInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: innovationRef, inView: innovationInView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -45,13 +50,12 @@ const LearnMore = () => {
     },
   ];
 
-  // Use the custom typewriter effect hook
   const collaborationText = useTypewriterEffect(sections[0].content, collaborationInView, 30);
   const sustainabilityText = useTypewriterEffect(sections[1].content, sustainabilityInView, 30);
   const innovationText = useTypewriterEffect(sections[2].content, innovationInView, 30);
 
   return (
-    <section className="relative flex flex-col justify-center items-center p-16 bg-gray-100 space-y-16">
+    <section className="relative flex flex-col justify-center items-center p-4 bg-gray-100 space-y-16">
       <header className="text-center mb-10 mt-16">
         <h2 className="text-4xl font-bold text-green-700">About Us</h2>
       </header>
@@ -91,7 +95,7 @@ const LearnMore = () => {
         </div>
 
         {/* Right Side: Demo Images */}
-        <div className="hidden lg:block w-full lg:w-1/3 space-y-8">
+        <div className="w-full lg:w-1/3 space-y-8">
           {/* First Image */}
           <img
             src={img1}
@@ -100,12 +104,15 @@ const LearnMore = () => {
           />
           {/* Second Image */}
           <img
-            src={img2}  // Second image directly below the first one
+            src={img2}
             alt="Another design concept"
             className="w-full h-auto object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>
+      
+      {/* Footer */}
+      <SemiFooter /> {/* Adding the SemiFooter at the bottom */}
     </section>
   );
 };
