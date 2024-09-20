@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section className="flex flex-col justify-center items-center p-16 bg-white space-y-16" id="about">
       <header className="text-center mb-5">
-        <h2 className="text-4xl font-bold text-gray-800">ABOUT US</h2>
+        <h2 className="text-4xl font-bold text-gray-800">OUR VALUES</h2>
       </header>
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         <div className="order-1 md:order-1">
