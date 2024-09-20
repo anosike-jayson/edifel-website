@@ -2,10 +2,10 @@ import React from 'react';
 import { MailIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/outline';
 
 const servicesList = [
-  { name: 'Design', id: 'design' },
-  { name: 'Industrial Design', id: 'industrial-design' },
-  { name: 'Architecture Support', id: 'architecture-support' },
-  { name: 'Renovation', id: 'renovation' }
+  { name: 'Mechanical', id: 'Mechanical' },
+  { name: 'Electrical', id: 'Electrical' },
+  { name: 'Plumbing', id: 'Plumbing' },
+  { name: 'Fire Protection', id: 'Fire-protection' }
 ];
 
 const contactInfo = {

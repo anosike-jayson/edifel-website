@@ -47,7 +47,7 @@ const NavBar = () => {
         </button>
         <div className={`nav-links space-x-8 md:flex ${isNavOpen ? 'block' : 'hidden'} md:block`}>
           <Link to="/" className="text-black text-xl hover:text-green-700">Home</Link>
-          <Link to="/about" className="text-black text-xl hover:text-green-700">About</Link>
+          <a href ="#about" className="text-black text-xl hover:text-green-700">About</a>
           <Link to="/selectedworks" className="text-black text-xl hover:text-green-700">Portfolio</Link>
           <Link to="/services" className="text-black text-xl hover:text-green-700">Services</Link>
           <Link to="/contact" className="text-black text-xl hover:text-green-700">Contact Us</Link>
