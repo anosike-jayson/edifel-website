@@ -39,38 +39,47 @@ const About = () => {
         {/* Collaboration Section */}
         <div
           ref={collaborationRef}
-          className={`flex flex-col space-y-4 text-left transition-transform duration-1000 ${collaborationInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
+          className={`flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-16 transition-transform duration-1000 ${collaborationInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
         >
-          <h1 className="text-3xl font-bold">{sections[0].title}</h1>
-          <span className="text-4xl">{sections[0].icon}</span> {/* Icon directly under title */}
-          <hr className="border-gray-300 w-full" />
-          <p className="text-lg max-w-full">
+          {/* Title and Icon in a column */}
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl font-bold">{sections[0].title}</h1>
+            <span className="text-5xl mt-2">{sections[0].icon}</span> {/* Icon directly under title */}
+          </div>
+          {/* Write-up beside the title and icon with spacing */}
+          <p className="text-lg max-w-md text-center sm:text-left">
             {sections[0].content}
           </p>
         </div>
 
-        {/* Sustainability Section - below Collaboration, title aligned right */}
+        {/* Sustainability Section */}
         <div
           ref={sustainabilityRef}
-          className={`flex flex-col space-y-4 text-right transition-transform duration-1000 ${sustainabilityInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
+          className={`flex flex-col sm:flex-row-reverse items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-16 transition-transform duration-1000 ${sustainabilityInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
         >
-          <h1 className="text-3xl font-bold">{sections[1].title}</h1>
-          <span className="text-4xl">{sections[1].icon}</span> {/* Icon directly under title */}
-          <hr className="border-gray-300 w-full" />
-          <p className="text-lg max-w-full text-left"> {/* Content aligned normally */}
+          {/* Title and Icon in a column */}
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl font-bold">{sections[1].title}</h1>
+            <span className="text-5xl mt-2">{sections[1].icon}</span> {/* Icon directly under title */}
+          </div>
+          {/* Write-up beside the title and icon with spacing */}
+          <p className="text-lg max-w-md text-center sm:text-left">
             {sections[1].content}
           </p>
         </div>
 
-        {/* Innovation Section - below Sustainability */}
+        {/* Innovation Section */}
         <div
           ref={innovationRef}
-          className={`flex flex-col space-y-4 text-left transition-transform duration-1000 ${innovationInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
+          className={`flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-16 transition-transform duration-1000 ${innovationInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
         >
-          <h1 className="text-3xl font-bold">{sections[2].title}</h1>
-          <span className="text-4xl">{sections[2].icon}</span> {/* Icon directly under title */}
-          <hr className="border-gray-300 w-full" />
-          <p className="text-lg max-w-full">
+          {/* Title and Icon in a column */}
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl font-bold">{sections[2].title}</h1>
+            <span className="text-5xl mt-2">{sections[2].icon}</span> {/* Icon directly under title */}
+          </div>
+          {/* Write-up beside the title and icon with spacing */}
+          <p className="text-lg max-w-md text-center sm:text-left">
             {sections[2].content}
           </p>
         </div>
