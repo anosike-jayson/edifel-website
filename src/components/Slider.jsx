@@ -30,7 +30,16 @@ const Slider = () => {
         <div className="text-white max-w-md space-y-4">
           <h1 className="text-3xl md:text-7xl font-bold text-gray-900" style={{ letterSpacing: '-0.01em' }}>
             Engineering spaces that <br />
-            <span className="text-red-600">inspire.</span>
+            <span
+              style={{
+                background: 'linear-gradient(to right,  #B2E1B8, #88D99D, #4DBF7A, #3C9C60, #2B7A48, #1A5E30, #000000)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              inspire
+            </span>
+            <span style={{ color: '#000000' }}>.</span>
           </h1>
           <p className="text-gray-900 text-lg md:text-xl typewriter">
             Turn your vision into inspiring spaces.
