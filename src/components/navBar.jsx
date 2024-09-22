@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import ediFelLogo from '../imgs/ediFel_Logo.png'; // Import your logo image
 
 const NavBar = () => {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -36,7 +37,11 @@ const NavBar = () => {
     >
       <div className="flex justify-between items-center">
         <div className="logo">
-          <h1 className="text-2xl font-bold text-black">ediFel</h1>
+          <img
+            src={ediFelLogo}
+            alt="ediFel Logo"
+            className="h-12 w-auto md:h-16" // Adjust height to make logo larger
+          />
         </div>
         <button
           onClick={handleToggle}
@@ -50,6 +55,7 @@ const NavBar = () => {
           <Link to="/#about" className="text-black text-xl hover:text-green-700">About</Link>
           <Link to="/#portfolio" className="text-black text-xl hover:text-green-700">Portfolio</Link>
           <Link to="/#services" className="text-black text-xl hover:text-green-700">Services</Link>
+
           <Link to="/contact" className="text-black text-xl hover:text-green-700">Contact Us</Link>
         </div>
       </div>
