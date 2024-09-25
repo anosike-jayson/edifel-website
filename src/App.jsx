@@ -8,6 +8,7 @@ import Portfolio from './components/Portfolio';
 import Semifooter from './components/SemiFooter';
 import LearnMore from './pages/LearnMore';
 import SelectedWorks from './pages/SelectedWorks'
+import ContactUs from './pages/ContactUs'
 import './App.css';
 
 const MainContent = () => {
@@ -34,6 +35,7 @@ const AppContent = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/learnmore" element={<LearnMore/>} />
         <Route path="/selectedworks" element={<SelectedWorks/>}/>
+        <Route path="/ContactUs" element={<ContactUs/>}></Route>
       </Routes>
     </div>
   );

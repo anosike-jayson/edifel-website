@@ -64,7 +64,6 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-
       {/* Right-Side Modal for mobile navigation */}
       {isNavOpen && (
         <div 
@@ -110,7 +109,7 @@ const NavBar = () => {
               Services
             </Link>
             <Link 
-              to="/contact" 
+              to="/ContactUs" 
               className="block text-xl hover:text-green-500"
               onClick={() => setIsNavOpen(false)}
             >
