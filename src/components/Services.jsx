@@ -21,7 +21,7 @@ const servicesData = [
     id: 'architecture-support'
   },
   {
-    icon: 'https://www.svgrepo.com/download/428682/architecture-construction-design.svg', 
+    icon: 'https://www.svgrepo.com/show/383763/security-protection-shield-fire-flame.svg', 
     title: 'Fire Protection',
     description: 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
     id: 'design'
@@ -36,7 +36,6 @@ const Services = () => {
       </header>
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-3 gap-8">
         <div className="md:col-span-1 md:row-span-2 flex flex-col justify-center items-center">
-          {/* Replace the heading with an image */}
           <img
             src= '/MEP.png' 
             alt="Our Services Overview"
