@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import ediFelLogo from '../imgs/ediFel_Logo.png'; // Import your logo image
+import ediFelLogo from '../imgs/ediFel_Logo.png'; 
 
 const NavBar = () => {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -56,7 +56,7 @@ const NavBar = () => {
           <Link to="/#portfolio" className="text-black text-xl hover:text-green-700">Portfolio</Link>
           <Link to="/#services" className="text-black text-xl hover:text-green-700">Services</Link>
 
-          <Link to="/contact" className="text-black text-xl hover:text-green-700">Contact Us</Link>
+          <Link to="ContactUs" className="text-black text-xl hover:text-green-700">Contact Us</Link>
         </div>
       </div>
     </nav>
