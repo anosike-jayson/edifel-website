@@ -34,7 +34,7 @@ const AppContent = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/learnmore" element={<LearnMore/>} />
         <Route path="/selectedworks" element={<SelectedWorks/>}/>
-        <Route path="/ContactUs" element={<ContactUs/>}></Route>
+        <Route path="/contact" element={<ContactUs/>}/>
       </Routes>
       <Semifooter/>
     </div>

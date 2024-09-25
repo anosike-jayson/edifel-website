@@ -109,7 +109,7 @@ const NavBar = () => {
               Services
             </Link>
             <Link 
-              to="/ContactUs" 
+              to="/contact" 
               className="block text-xl hover:text-green-500"
               onClick={() => setIsNavOpen(false)}
             >
