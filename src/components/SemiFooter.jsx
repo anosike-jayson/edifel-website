@@ -1,5 +1,6 @@
 import React from 'react';
 import { MailIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/outline';
+import ediFelLogo from '../imgs/ediFel_Logo.png'; 
 
 const servicesList = [
   { name: 'Mechanical', id: 'Mechanical' },
@@ -19,7 +20,13 @@ const Semifooter = () => {
     <footer className="bg-gray-100 p-16">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
         <div className="flex flex-col items-start space-y-4">
-          <h1 className="text-4xl font-bold text-gray-800">ediFel</h1>
+        <div className="logo">
+          <img
+            src={ediFelLogo}
+            alt="ediFel Logo"
+            className="h-12 w-auto md:h-16" 
+          />
+        </div>
           <p className="text-lg text-gray-600 max-w-md">
             Welcome to Edifel, where innovation meets excellence. Explore our diverse range of offerings and discover how we can help you achieve your goals.
           </p>
