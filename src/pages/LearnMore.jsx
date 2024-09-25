@@ -110,9 +110,6 @@ const LearnMore = () => {
           />
         </div>
       </div>
-      
-      {/* Footer */}
-      <SemiFooter /> {/* Adding the SemiFooter at the bottom */}
     </section>
   );
 };

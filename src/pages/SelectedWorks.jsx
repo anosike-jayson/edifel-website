@@ -50,7 +50,6 @@ const SelectedWorks = () => {
                     </div>
                 )}
             </div>
-            <SemiFooter /> {/* Place SemiFooter outside the main div */}
         </>
     );
 };

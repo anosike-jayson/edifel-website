@@ -9,12 +9,10 @@ import Semifooter from '../components/SemiFooter';
 const Homepage = () => {
     return (
         <div>
-            <NavBar />
             <Slider />
             <About />
             <Services />
             <Portfolio />
-            <Semifooter/>
         </div>
     );
 };
