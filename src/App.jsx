@@ -18,7 +18,6 @@ const MainContent = () => {
       <About />
       <Services />
       <Portfolio />
-      <Semifooter />
     </>
   );
 };
@@ -37,6 +36,7 @@ const AppContent = () => {
         <Route path="/selectedworks" element={<SelectedWorks/>}/>
         <Route path="/ContactUs" element={<ContactUs/>}></Route>
       </Routes>
+      <Semifooter/>
     </div>
   );
 };
