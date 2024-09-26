@@ -11,6 +11,7 @@ import SelectedWork from './components/Portfolio';
 import SelectedWorks from './pages/SelectedWorks';
 import ContactUs from './pages/ContactUs';
 import Locations from './components/Location'
+import Footer from './components/Footer'
 import './App.css';
 
 // Scroll to top on route change
@@ -45,12 +46,14 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/location" element={<Locations />} />
         <Route path="/selectedWorks" element={<SelectedWork />} />
         <Route path="/learnmore" element={<LearnMore />} />
         <Route path="/selectedworks/details" element={<SelectedWorks />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Semifooter />
+      <Footer/>
     </div>
   );
 };

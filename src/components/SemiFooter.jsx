@@ -1,9 +1,10 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import { MailIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/outline';
 import ediFelLogo from '../imgs/ediFel_Logo.png'; 
 
 const servicesList = [
-  { name: 'Mechanical', id: 'Mechanical' },
+  { name: 'Mechanical', id: 'services' },
   { name: 'Electrical', id: 'Electrical' },
   { name: 'Plumbing', id: 'Plumbing' },
   { name: 'Fire Protection', id: 'Fire-protection' }
@@ -36,9 +37,7 @@ const Semifooter = () => {
           <ul className="space-y-2">
             {servicesList.map((service, index) => (
               <li key={index} className="text-lg text-gray-600">
-                <a href={`#${service.id}`} className="text-gray-500 hover:underline">
-                  {service.name}
-                </a>
+                <Link smooth to={`#${service.id}`} className="text-gray-500 hover:underline">{service.name}</Link>
               </li>
             ))}
           </ul>

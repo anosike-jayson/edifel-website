@@ -6,21 +6,21 @@ const Consultation = () => {
     <div className="bg-gray-100 text-gray-700 py-16">
       <div className="container mx-auto px-6 lg:px-8">
 
-        <h1 className="text-4xl lg:text-2xl font-bold mb-4">
+        <h1 className="text-4xl lg:text-4xl font-bold mb-4 text-center">
           CONSULTING
         </h1>
-        <div className="grid grid-cols-4 gap-4 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
           <ServiceCard
-            image={<img src="/CRC_logo_RGB.png" alt="Consulting" />}
+            image={<img src="/CRC_logo_RGB.png" alt="Consulting" className="w-full h-auto" />}
             title="Climate Resilience Hubs"
             description="At ediFel we are PROUD to provide TECHNICAL ASSISTANCE on grant applications for projects throughout North America. Our focus is to provide support with other team members, ensuring that DISADVANTAGED COMMUNITIES are provided with technical knowledge needed to make informed decisions."
             className="col-span-1"
           />
-          <div className="col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2"> 
             <ServiceCard
               image={<BarChart size={48} />}
               title="Energy Modeling & Life Cycle Cost Analysis"
-              description="We use Industry standard computer software to SIMULATE & ANALYZE buildings. This exercise is needed to help clients make decisions about energy consumption when adding or removing various KEY COMPONENTS within the building design process. The life cycle cost analysis is provided and used to discuss ROI on MEPFP equipment purchases. This helps the team make informed decisions by comparing energy use, first costs and savings with multiple SYSTEM ANALYSIS."
+              description="We use industry standard computer software to SIMULATE & ANALYZE buildings. This exercise is needed to help clients make decisions about energy consumption when adding or removing various KEY COMPONENTS within the building design process. The life cycle cost analysis is provided and used to discuss ROI on MEPFP equipment purchases. This helps the team make informed decisions by comparing energy use, first costs and savings with multiple SYSTEM ANALYSIS."
               alignLeft={true}
             />
             <div className="bg-white p-6 rounded-lg shadow-md mt-4">

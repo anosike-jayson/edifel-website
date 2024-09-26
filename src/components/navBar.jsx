@@ -10,10 +10,15 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setShowNavBar(true);
+      // Only hide the navbar if scrolled down more than a certain threshold
+      if (window.scrollY > 50) {
+        if (window.scrollY < lastScrollY) {
+          setShowNavBar(true); // Scroll up
+        } else {
+          setShowNavBar(false); // Scroll down
+        }
       } else {
-        setShowNavBar(false);
+        setShowNavBar(true); // Always show at the top
       }
       setLastScrollY(window.scrollY);
     };
@@ -36,9 +41,7 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-transparent py-2 px-3 md:px-16 shadow-lg border-b border-transparent transition-transform duration-300 ${
-          showNavBar ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-transparent py-2 px-3 md:px-16 shadow-lg border-b border-transparent transition-transform duration-300 ${showNavBar ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <div className="flex justify-between items-center">
           <div className="logo">
@@ -60,6 +63,7 @@ const NavBar = () => {
             <Link smooth to="/#about" className="text-black text-lg hover:text-green-700">About</Link> 
             <Link smooth to="/#selectedWorks" className="text-black text-lg hover:text-green-700">Selected works</Link>
             <Link smooth to="/#services" className="text-black text-lg hover:text-green-700">Services</Link>
+            <Link smooth to="/#location" className="text-black text-lg hover:text-green-700">Location</Link>
             <Link to="/contact" className="text-black text-lg hover:text-green-700">Contact Us</Link>
           </div>
         </div>
@@ -107,6 +111,13 @@ const NavBar = () => {
               onClick={() => setIsNavOpen(false)}
             >
               Services
+            </Link>
+            <Link 
+              to="/#location" 
+              className="block text-xl hover:text-green-500"
+              onClick={() => setIsNavOpen(false)}
+            >
+              Location
             </Link>
             <Link 
               to="/contact" 
