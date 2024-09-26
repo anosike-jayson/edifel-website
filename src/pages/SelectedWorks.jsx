@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import SemiFooter from '../components/SemiFooter';
 
 const SelectedWorks = () => {
     const location = useLocation();

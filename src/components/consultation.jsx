@@ -1,128 +1,68 @@
 import React from 'react';
-import resilienceLogo from '../imgs/CRC_logo_RGB.png'; // Importing the image
-import feasibilityImage from '../imgs/second-slider.jpg'; // Normal image for Feasibility Studies
-import energyImage from '../imgs/third-slider.jpg'; // Normal image for Energy Modeling
-import { motion } from 'framer-motion'; // Importing framer-motion for animations
+import { BarChart, FileSearch } from 'lucide-react';
 
 const Consultation = () => {
   return (
-    <div className="bg-gray-50 py-16">
+    <div className="bg-gray-100 text-gray-700 py-16">
       <div className="container mx-auto px-6 lg:px-8">
-        <motion.h2 
-          className="text-5xl font-extrabold text-center mb-16 text-gray-900" 
-          initial={{ opacity: 0, y: 50 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1 }}
-        >
-          Consulting Services
-        </motion.h2>
 
-        {/* Climate Resilience Hubs Section */}
-        <motion.div 
-          className="mb-16 grid lg:grid-cols-2 gap-12 items-center" 
-          initial={{ opacity: 0, x: -50 }} 
-          whileInView={{ opacity: 1, x: 0 }} 
-          viewport={{ once: false, amount: 0.2 }} 
-          transition={{ duration: 0.8 }}
-        >
-          <img 
-            src={resilienceLogo} 
-            alt="Climate Resilience Logo" 
-            className="w-full max-w-sm object-contain"
+        <h1 className="text-4xl lg:text-2xl font-bold mb-4">
+          CONSULTING
+        </h1>
+        <div className="grid grid-cols-4 gap-4 mt-16">
+          <ServiceCard
+            image={<img src="/CRC_logo_RGB.png" alt="Consulting" />}
+            title="Climate Resilience Hubs"
+            description="At ediFel we are PROUD to provide TECHNICAL ASSISTANCE on grant applications for projects throughout North America. Our focus is to provide support with other team members, ensuring that DISADVANTAGED COMMUNITIES are provided with technical knowledge needed to make informed decisions."
+            className="col-span-1"
           />
-          <div>
-            <h3 className="text-4xl font-semibold mb-4 text-gray-900">Climate Resilience Hubs</h3>
-            <p className="text-gray-700 leading-relaxed">
-              At ediFel, we provide technical assistance on grant applications across North America. 
-              Our goal is to support disadvantaged communities by ensuring they have the technical knowledge 
-              to make informed decisions. This includes projects that focus on climate resilience and ensuring 
-              that communities are equipped to handle environmental challenges.
-            </p>
+          <div className="col-span-2">
+            <ServiceCard
+              image={<BarChart size={48} />}
+              title="Energy Modeling & Life Cycle Cost Analysis"
+              description="We use Industry standard computer software to SIMULATE & ANALYZE buildings. This exercise is needed to help clients make decisions about energy consumption when adding or removing various KEY COMPONENTS within the building design process. The life cycle cost analysis is provided and used to discuss ROI on MEPFP equipment purchases. This helps the team make informed decisions by comparing energy use, first costs and savings with multiple SYSTEM ANALYSIS."
+              alignLeft={true}
+            />
+            <div className="bg-white p-6 rounded-lg shadow-md mt-4">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 mr-4">
+                  <img src="/Seal_of_the_United_States_Environmental_Protection_Agency.svg.png" alt="Green Building Certifications" className="w-16 h-16" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">GREEN BUILDING CERTIFICATIONS</h4>
+                  <ul className="text-gray-600 list-disc list-inside">
+                    <li>LEED ACCREDITATIONS</li>
+                    <li>PASSIVE HOUSE BUILDING DESIGN</li>
+                    <li>ENERGY STAR</li>
+                    <li>COMED</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </motion.div>
-
-        {/* Feasibility Studies Section */}
-        <motion.div 
-          className="mb-16 grid lg:grid-cols-2 gap-12 items-center" 
-          initial={{ opacity: 0, x: -50 }} 
-          whileInView={{ opacity: 1, x: 0 }} 
-          viewport={{ once: false, amount: 0.2 }} 
-          transition={{ duration: 0.8 }}
-        >
-          <div>
-            <h3 className="text-4xl font-semibold mb-4 text-gray-900">Feasibility Studies</h3>
-            <p className="text-gray-700 leading-relaxed">
-              We conduct preliminary investigations into the viability of building projects, identifying 
-              potential challenges and ensuring the success of the project in the early stages. These studies 
-              help mitigate risks and provide valuable insights for future project planning.
-            </p>
-          </div>
-          <motion.img 
-            src={feasibilityImage} 
-            alt="Feasibility Studies" 
-            className="w-full max-w-xs object-contain" 
-            initial={{ opacity: 0, x: 50 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: false, amount: 0.2 }} 
-            transition={{ duration: 0.8 }}
+          <ServiceCard
+            image={<FileSearch size={48} />}
+            title="Feasibility Study"
+            description="Identifying potential issues and challenges at the INITIAL PHASE of acquiring a building is crucial to the success of the project down the road. We provide PRELIMINARY INVESTIGATION into a building project viability."
+            className="col-span-1"
+            alignLeft={true}
           />
-        </motion.div>
-
-        {/* Energy Modeling & Life Cycle Cost Analysis Section */}
-        <motion.div 
-          className="mb-16 grid lg:grid-cols-2 gap-12 items-center" 
-          initial={{ opacity: 0, x: 50 }} 
-          whileInView={{ opacity: 1, x: 0 }} 
-          viewport={{ once: false, amount: 0.2 }} 
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.img 
-            src={energyImage} 
-            alt="Energy Modeling" 
-            className="w-full max-w-xs object-contain"
-            initial={{ opacity: 0, x: -50, rotate: -10 }} 
-            animate={{ opacity: 1, x: 0, rotate: 0 }} 
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-          />
-          <div>
-            <motion.h3 
-              className="text-4xl font-semibold mb-4 text-gray-900" 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Energy Modeling & Life Cycle Cost Analysis
-            </motion.h3>
-            <motion.p 
-              className="text-gray-700 leading-relaxed"
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              We use advanced software to simulate building designs, helping clients optimize energy consumption. 
-              Our life cycle cost analysis helps assess ROI on mechanical, electrical, and plumbing systems, 
-              providing a comparison of energy use and savings.
-            </motion.p>
-          </div>
-        </motion.div>
-
-        {/* Green Building Certifications Section */}
-        <motion.div 
-          className="mb-16 bg-white p-8 shadow-lg rounded-lg" 
-          initial={{ opacity: 0, x: 50 }} 
-          whileInView={{ opacity: 1, x: 0 }} 
-          viewport={{ once: false, amount: 0.2 }} 
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="text-3xl font-semibold mb-4 text-gray-900">Green Building Certifications</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>LEED Accreditations</li>
-            <li>Passive House Building Design</li>
-            <li>Energy Star</li>
-            <li>ComEd</li>
-          </ul>
-        </motion.div>
+        </div>
       </div>
+    </div>
+  );
+};
+
+const ServiceCard = ({ image, title, description, className, alignLeft = false }) => {
+  return (
+    <div className={`bg-white p-6 rounded-lg shadow-md flex flex-col ${alignLeft ? 'items-start' : 'items-center'} w-full ${className}`}>
+      {image && (
+        <div className="mb-4 p-3 rounded-full">
+          {image}
+        </div>
+      )}
+      <h4 className="text-2xl font-semibold mb-2 text-left w-full">{title}</h4>
+      <div className="text-gray-600 text-left w-full">{description}</div>
     </div>
   );
 };
