@@ -58,7 +58,7 @@ const NavBar = () => {
           <div className="hidden md:flex space-x-6">
             <Link smooth to="/" className="text-black text-lg hover:text-green-700">Home</Link>
             <Link smooth to="/#about" className="text-black text-lg hover:text-green-700">About</Link> 
-            <Link smooth to="/#portfolio" className="text-black text-lg hover:text-green-700">Portfolio</Link>
+            <Link smooth to="/#selectedWorks" className="text-black text-lg hover:text-green-700">Selected works</Link>
             <Link smooth to="/#services" className="text-black text-lg hover:text-green-700">Services</Link>
             <Link to="/contact" className="text-black text-lg hover:text-green-700">Contact Us</Link>
           </div>
@@ -95,11 +95,11 @@ const NavBar = () => {
               About
             </Link>
             <Link 
-              smooth to="/#portfolio" 
+              smooth to="/#selectedWorks" 
               className="block text-xl hover:text-green-500"
               onClick={() => setIsNavOpen(false)}
             >
-              Portfolio
+              Selected works
             </Link>
             <Link 
               smooth to="/#services" 
