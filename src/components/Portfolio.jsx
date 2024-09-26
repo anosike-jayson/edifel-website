@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const portfolioData = [
     {
-        image: '/Commercial/WestLoop/IMG_8929.jpg',
+        image: '/Commercial/WestLoop/IMG_8932.jpg',
         description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
         title: 'The West Loop Office Renovation',
         link: '/selectedworks/details',
@@ -53,23 +53,14 @@ const portfolioData = [
         ]
     },
     {
-        image: '/Residential/Garfield/IMG_9159.jpg',
+        image: '/Commercial/Boulevard/IMG_8921.jpg',
         description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
         title: 'The Boulevard ',
         link: '/selectedworks/details',
         relatedImages: [,
-            '/Residential/Garfield/IMG_9167.jpg',
-            '/Residential/Garfield/IMG_9157.jpg',
-            '/Residential/Garfield/IMG_9168.jpg',
-            '/Residential/Garfield/IMG_9172.jpg',
-            '/Residential/Garfield/IMG_9173.jpg',
-            '/Residential/Garfield/IMG_9175.jpg',
-            '/Residential/Garfield/IMG_9176.jpg',
-            '/Residential/Garfield/IMG_9217.jpg',
-            '/Residential/Garfield/IMG_9225.jpg',
-            '/Residential/Garfield/IMG_9227.jpg',
-            '/Residential/Garfield/IMG_9229.jpg',
-            '/Residential/Garfield/IMG_9235.jpg',
+            '/Commercial/Boulevard/IMG_8913.jpg',
+            '/Commercial/Boulevard/IMG_8915.jpg',
+            '/Commercial/Boulevard/IMG_8921.jpg',
         ]
     },
     {
@@ -101,7 +92,7 @@ const portfolioData = [
     {
         image: '/Residential/Glenview/IMG_8982.jpg',
         description: 'Glenview Residence',
-        title: 'Glenview Project',
+        title: 'Glenview Residence',
         link: '/selectedworks/details',
         relatedImages: [
             '/Residential/Glenview/IMG_8982.jpg',
@@ -110,9 +101,9 @@ const portfolioData = [
         ] 
     },
     {
-        image: '/Residential/Green/IMG_9144.jpg',
+        image: '/Residential/Green/IMG_9148.jpg',
         description: 'Green Street',
-        title: 'Green Project',
+        title: 'Green Street',
         link: '/selectedworks/details',
         relatedImages: [
             '/Residential/Green/IMG_9144.jpg',
@@ -138,25 +129,30 @@ const SelectedWorks = () => {
                                 alt={item.title}
                                 className="w-full h-full object-cover rounded-lg transition-transform duration-300"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
-                                <div className="absolute inset-0 p-4 flex flex-col justify-end space-y-2">
-                                    <p className="text-white text-lg">{item.title}</p>
-                                    <Link
-                                        to={item.link}
-                                        state={{ 
-                                            image: item.image, 
-                                            description: item.description, 
-                                            title: item.title,
-                                            relatedImages: item.relatedImages 
-                                        }}
-                                        className="flex items-center text-white text-lg"
-                                    >
-                                        <span>Details</span>
-                                        <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </Link>
-                                </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300" />
+
+                            {/* Static title that moves up on hover */}
+                            <p className="absolute bottom-4 left-0 right-0 p-4 text-white text-lg transform translate-y-0 group-hover:translate-y-[-40px] transition-transform duration-300">
+                                {item.title}
+                            </p>
+
+                            {/* Details link that animates upwards on hover */}
+                            <div className="absolute bottom-4 left-0 right-0 p-4 flex items-center transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-transform duration-300">
+                                <Link
+                                    to={item.link}
+                                    state={{
+                                        image: item.image,
+                                        description: item.description,
+                                        title: item.title,
+                                        relatedImages: item.relatedImages
+                                    }}
+                                    className="flex items-center text-white hover:text-green-700 text-lg"
+                                >
+                                    <span>Details</span>
+                                    <svg className="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </Link>
                             </div>
                         </div>
                     ))}

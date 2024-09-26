@@ -23,7 +23,7 @@ const MapComponent = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-start">
+    <div className="flex flex-col md:flex-row items-start h-full" id="location">
       {/* Map Container */}
       <div className="w-full md:w-2/3 h-64 md:h-96">
         <MapContainer center={[39.8283, -98.5795]} zoom={4} className="h-full w-full">
@@ -40,12 +40,12 @@ const MapComponent = () => {
       </div>
 
       {/* Locations List */}
-      <div className="w-full md:w-1/3 p-4">
-        <h3 className="text-lg font-bold mb-4">Featured Locations</h3>
+      <div className="w-full md:w-1/3 p-4 flex flex-col justify-between h-full">
+        <h3 className="text-lg font-bold mb-4">Locations</h3>
         <ul>
           {locations.map((location, index) => (
             <li key={index} className="flex items-center mb-2">
-              <FaMapMarkerAlt className="mr-2 text-red-500" />
+              <FaMapMarkerAlt className="mr-2 text-gray-500" />
               <span>{location.name}</span>
             </li>
           ))}
