@@ -64,7 +64,7 @@ const portfolioData = [
         ]
     },
     {
-        image: '/Commercial/Managment/IMG_9066.jpg',
+        image: '/Commercial/Managment/IMG_9086.jpg',
         description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
         title: 'The Management Office ',
         link: '/selectedworks/details',
