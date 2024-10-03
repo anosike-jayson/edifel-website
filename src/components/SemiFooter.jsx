@@ -11,8 +11,8 @@ const servicesList = [
 ];
 
 const contactInfo = {
-  email: 'info@edifeldesigns.com',
-  location: '123 Main St, City, Country.',
+  email: 'victoriab@edifeldesigns.com',
+  location: 'Detroit,Chicago,Los Angeles and Laurel.',
   phone: '+1 734-358-5142'
 };
 
