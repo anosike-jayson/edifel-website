@@ -23,33 +23,36 @@ const MapComponent = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-start h-full" id="location">
-      {/* Map Container */}
-      <div className="w-full md:w-2/3 h-64 md:h-96">
-        <MapContainer center={[39.8283, -98.5795]} zoom={4} className="h-full w-full">
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-          />
-          {locations.map((location, index) => (
-            <Marker key={index} position={location.position}>
-              <Popup>{location.name}</Popup>
-            </Marker>
-          ))}
-        </MapContainer>
-      </div>
+    <div className="flex justify-center items-start h-full py-8" id="location">
+      {/* Container for Map and Locations */}
+      <div className="w-full max-w-7xl flex flex-col md:flex-row items-start">
+        {/* Map Container */}
+        <div className="w-full md:w-2/3 h-64 md:h-96">
+          <MapContainer center={[39.8283, -98.5795]} zoom={4} className="h-full w-full rounded-lg shadow-lg">
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+            />
+            {locations.map((location, index) => (
+              <Marker key={index} position={location.position}>
+                <Popup>{location.name}</Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </div>
 
-      {/* Locations List */}
-      <div className="w-full md:w-1/3 p-4 flex flex-col justify-between h-full">
-        <h3 className="text-lg font-bold mb-4">Locations</h3>
-        <ul>
-          {locations.map((location, index) => (
-            <li key={index} className="flex items-center mb-2">
-              <FaMapMarkerAlt className="mr-2 text-gray-500" />
-              <span>{location.name}</span>
-            </li>
-          ))}
-        </ul>
+        {/* Locations List */}
+        <div className="w-full md:w-1/3 p-4 flex flex-col justify-between h-full">
+          <h3 className="text-lg font-bold mb-4">Locations</h3>
+          <ul>
+            {locations.map((location, index) => (
+              <li key={index} className="flex items-center mb-2">
+                <FaMapMarkerAlt className="mr-2 text-gray-500" />
+                <span>{location.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

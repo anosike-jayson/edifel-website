@@ -4,15 +4,15 @@ import { MailIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/outlin
 import ediFelLogo from '../imgs/ediFel_Logo.png'; 
 
 const servicesList = [
-  { name: 'Mechanical', id: 'services' },
-  { name: 'Electrical', id: 'Electrical' },
-  { name: 'Plumbing', id: 'Plumbing' },
-  { name: 'Fire Protection', id: 'Fire-protection' }
+  { name: 'Mechanical', id: '/#services' },
+  { name: 'Electrical', id: '/#services' },
+  { name: 'Plumbing', id: '/#services' },
+  { name: 'Fire Protection', id: '/#services' }
 ];
 
 const contactInfo = {
   email: 'victoriab@edifeldesigns.com',
-  location: 'Detroit,Chicago,Los Angeles and Laurel.',
+  location: 'Detroit, Chicago, Los Angeles and Laurel.',
   phone: '+1 734-358-5142'
 };
 
@@ -37,7 +37,7 @@ const Semifooter = () => {
           <ul className="space-y-2">
             {servicesList.map((service, index) => (
               <li key={index} className="text-lg text-gray-600">
-                <Link smooth to={`#${service.id}`} className="text-gray-500 hover:underline">{service.name}</Link>
+                <Link smooth to={`${service.id}`} className="text-gray-500 hover:underline">{service.name}</Link>
               </li>
             ))}
           </ul>
