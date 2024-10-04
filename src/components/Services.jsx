@@ -23,7 +23,7 @@ const servicesData = [
   {
     icon: 'https://www.svgrepo.com/show/383763/security-protection-shield-fire-flame.svg', 
     title: 'Fire Protection',
-    description: 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+    description: '•Fire Pump Room Circulation.\n•Water pressure requirements for building sprinkler systems.\n•Fire sprinkler system compliance with NFPA 13 standards and local fire codes.\n•Sprinkler riser diagrams design and distribution layout.',
     id: 'design'
   }
 ];

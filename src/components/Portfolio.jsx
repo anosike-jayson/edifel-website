@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 const portfolioData = [
     {
         image: '/Commercial/WestLoop/IMG_8932.jpg',
-        description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
+        description: `A three-story heavy timber- masonry structure in Wicker Park, IL. ediFel Designs was pleased to conduct an analysis of the existing conditions prior to providing MEP design drawings for permit. The major scope was to reroute existing ductwork around the new Architectural layout and demising walls.<br><br>
+•Size: ~10,000 SF. <br><br>
+•Architect: Lee Architecture. <br><br>
+•Building Use: Commercial Office Space. <br><br>
+•Location: Chicago, IL. 
+`,
         title: 'The West Loop Office Renovation',
         link: '/selectedworks/details',
         relatedImages: [,
@@ -14,8 +19,14 @@ const portfolioData = [
         ]
     },
     {
-        image: '/Commercial/WoodShop/IMG_9024.jpg',
-        description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
+        image: '/Commercial/WoodShop/IMG_9033.jpg',
+        description: `The Woodshop 
+Following the aftermath of the pandemic, and the slow down on the need for commercial spaces.  Live/work units are hybrid spaces that combine the elements of a residential living with a commercial office space. ediFel designs provide MEP design services with tankless water heaters, Rooftop unit, and exhaust system within the building. <br><br>
+•Size: ~3000 SF. <br><br>
+•Architect: Range Design & Architecture. <br><br>
+•Building Use: Live/Work Unit. <br><br>
+•Location: Chicago, IL. <br><br>
+`,     
         title: "The Woodshop",
         link: '/selectedworks/details',
         relatedImages: [,
@@ -34,7 +45,12 @@ const portfolioData = [
     },
     {
         image: '/Residential/Garfield/IMG_9157.jpg',
-        description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
+        description: `A multi-family residential building with one to two bedrooms. ediFel designs was tasked to provide Design-Build engineering services for this existing building renovation. The MEP systems were reviewed in compliance with the most recent building codes. <br><br>
+•Size: ~16,000 SF. <br><br>
+•Architect: Yu Collaborative. <br><br>
+•Building Use: Multi-Family Residential. <br><br>
+•Location: Chicago, IL. <br><br>
+`   ,
         title: 'Garfield Multi-family ',
         link: '/selectedworks/details',
         relatedImages: [,
@@ -54,7 +70,12 @@ const portfolioData = [
     },
     {
         image: '/Commercial/Boulevard/IMG_8921.jpg',
-        description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
+        description: `The Boulevard is a homeless shelter located in the Humboldt Park neighborhood of Chicago. Upon the fire that encompassed the existing structure, our team provided MEP design for the renovation of the burnt down portion office space of the structure. <br><br>
+•Size: ~2800 SF. <br><br>
+•Architect: MDT Architects. <br><br>
+•Building Use: Commercial Office Space. <br><br>
+•Location: Chicago, IL. <br><br>
+`,
         title: 'The Boulevard ',
         link: '/selectedworks/details',
         relatedImages: [,
@@ -65,7 +86,12 @@ const portfolioData = [
     },
     {
         image: '/Commercial/Managment/IMG_9086.jpg',
-        description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
+        description: `The M & M property management office located at 506 Wesley Ave, was a tenant fit-out renovation. ediFel designs was tasked to provide MEP services for the new building layout. <br><br>
+•Size: ~2400 SF. <br><br>
+•Architect: Laura Fehlberg Architects. <br><br>
+•Building Use: Commercial Office Space. <br><br>
+•Location: Oak Park, IL. <br><br>
+`,    
         title: 'The Management Office ',
         link: '/selectedworks/details',
         relatedImages: [,
@@ -80,8 +106,13 @@ const portfolioData = [
     },
     {
         image: '/Commercial/Bronzeville/IMG_9268.jpg',
-        description: 'At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise At ediFel Designs, our main focus is designing with a collaborative approach. We communicate closely with the client, bringing their vision to life. With accredited professionals in LEED, WELL, and Fitwel, as well as Certified Passive House Designers, we offer a wide variety of expertise .',
-        title: 'Bronzeville Winery',
+        description: `Bronzeville winery is a neighborhood revitalization project that brings forth all the unique potentials of the Chicago south-side. This project was one of its kind, with the cheer support from the Mayor, the city and the community. ediFel designs was proud to provide MEP design drawings for this restaurant which is located on the ground floor of a 5 -story mixed use residential. <br><br>
+•Size: ~2200 SF. <br><br>
+•Architect: Future Firm. <br><br>
+•Building Use: Restaurant. <br><br>
+•Location: Chicago, IL. <br><br>
+`,
+        title: 'Bronzvile Winery',
         link: '/selectedworks/details',
         relatedImages: [,
             '/Commercial/Bronzeville/IMG_9268.jpg',
@@ -91,7 +122,12 @@ const portfolioData = [
     },
     {
         image: '/Residential/Glenview/IMG_8982.jpg',
-        description: 'Glenview Residence',
+        description: `A luxury single family residence located in Glenview, IL. This residence is provided with a robust water heater system, VRF heat pump mechanical system for heating and cooling, backup generator, snow melt system, energy recovery ventilators and high end kitchen equipment. <br><br>
+•Size: ~10,000 SF. <br><br>
+•Architect: Jason Meyering Architecture. <br><br>
+•Building Use: Single-Family Residential. <br><br>
+•Location: Glenview, IL. <br><br>
+`,
         title: 'Glenview Residence',
         link: '/selectedworks/details',
         relatedImages: [
@@ -102,7 +138,12 @@ const portfolioData = [
     },
     {
         image: '/Residential/Green/IMG_9148.jpg',
-        description: 'Green Street',
+        description: `A multi-family residential building with one to two bedrooms. ediFel designs was tasked to provide Design-Build engineering services for this existing building renovation. The MEP systems were reviewed in compliance with the most recent building codes. <br><br>
+•Size: ~16,000 SF. <br><br>
+•Architect: Yu Collaborative. <br><br>
+•Building Use: Multi-Family Residential. <br><br>
+•Location: Chicago, IL.<br><br>
+`,
         title: 'Green Street',
         link: '/selectedworks/details',
         relatedImages: [

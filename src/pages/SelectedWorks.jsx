@@ -6,7 +6,7 @@ const SelectedWorks = () => {
     const { image, description, title, relatedImages } = location.state || {};
 
     useEffect(() => {
-        window.scrollTo(0, 0); 
+        window.scrollTo(0, 0);
     }, []);
 
     return (
@@ -19,7 +19,7 @@ const SelectedWorks = () => {
                     {/* Description on the left */}
                     <div className="md:w-1/2">
                         <h1 className="text-xl font-bold mb-6">{'Description'}</h1>
-                        <p className="text-lg text-gray-700">{description}</p>
+                        <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: description }} />
                     </div>
                     {/* Image on the right */}
                     <div className="md:w-1/2 flex justify-center">

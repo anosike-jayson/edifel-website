@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { BarChart, FileSearch } from 'lucide-react';
+import { BarChart, FileSearch, Building, Building2, Sun } from 'lucide-react'; // Import relevant SVGs
 
 const Consultation = () => {
   const sectionRef = useRef(null);
@@ -17,7 +17,7 @@ const Consultation = () => {
             cards.forEach((card, index) => {
               if (card) {
                 card.style.animation = 'none'; // Reset animation
-                card.classList.remove('opacity-0'); // Make sure the element is visible lol
+                card.classList.remove('opacity-0'); // Make sure the element is visible
                 void card.offsetWidth; // Trigger reflow to reset animation
                 card.style.animation = index % 2 === 0 ? 'slideFromLeft 1s ease-in-out' : 'slideFromRight 1s ease-in-out';
               }
@@ -77,9 +77,12 @@ const Consultation = () => {
             ref={(el) => (cardRefs.current[0] = el)}
           >
             <ServiceCard
-              image={<img src="/CRC_logo_RGB.png" alt="Consulting" className="w-full h-auto" />}
+              image={<Building size={48}  />} // Top-left SVG
               title="Climate Resilience Hubs"
-              description="At ediFel we are PROUD to provide TECHNICAL ASSISTANCE on grant applications for projects throughout North America."
+              description="At ediFel we are PROUD to provide TECHNICAL
+ASSISTANCE on grant applications for projects throughout North America. Our focus is to provide support
+with other team members, ensuring that DISADVANTAGED COMMUNITIES are provided with
+technical knowledge needed to make informed decisions."
             />
           </div>
 
@@ -89,21 +92,17 @@ const Consultation = () => {
             ref={(el) => (cardRefs.current[1] = el)}
           >
             <ServiceCard
-              image={<BarChart size={48} />}
+              image={<BarChart size={48} />} // Top-left SVG
               title="Energy Modeling & Life Cycle Cost Analysis"
               description="We use industry standard computer software to SIMULATE & ANALYZE buildings. This exercise helps clients make decisions about energy consumption."
               alignLeft={true}
             />
             <div className="bg-white p-6 rounded-lg shadow-md mt-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0 mr-4">
-                  <img
-                    src="/Seal_of_the_United_States_Environmental_Protection_Agency.svg.png"
-                    alt="Green Building Certifications"
-                    className="w-16 h-16"
-                  />
+              <div className="relative">
+                <div className="absolute top-0 left-0 p-2">
+                  <Building2 size={48} />
                 </div>
-                <div>
+                <div className="ml-16"> {/* Add margin to create space for the SVG */}
                   <h4 className="text-xl font-semibold mb-2">GREEN BUILDING CERTIFICATIONS</h4>
                   <ul className="text-gray-600 list-disc list-inside">
                     <li>LEED ACCREDITATIONS</li>
@@ -122,9 +121,12 @@ const Consultation = () => {
             ref={(el) => (cardRefs.current[2] = el)}
           >
             <ServiceCard
-              image={<FileSearch size={48} />}
+              image={<FileSearch size={48} />} 
               title="Feasibility Study"
-              description="Identifying potential issues at the INITIAL PHASE of acquiring a building is crucial to project success."
+              description="Identifying potential issues and challenges at the
+INITIAL PHASE of acquiring a building is crucial to the
+success of the project down the road. We provide
+PRELIMINARY INVESTIGATION into a building project viability."
               alignLeft={true}
             />
           </div>
@@ -136,13 +138,13 @@ const Consultation = () => {
 
 const ServiceCard = ({ image, title, description, className, alignLeft = false }) => {
   return (
-    <div className={`bg-white p-6 rounded-lg shadow-md flex flex-col ${alignLeft ? 'items-start' : 'items-center'} w-full ${className}`}>
+    <div className={`bg-white p-6 rounded-lg shadow-md flex flex-col relative ${alignLeft ? 'items-start' : 'items-center'} w-full ${className}`}>
       {image && (
-        <div className="mb-4 p-3 rounded-full">
-          {image}
+        <div className="absolute top-0 left-0 p-2">
+          {image} {/* Position SVG in top-left */}
         </div>
       )}
-      <h4 className="text-2xl font-semibold mb-2 text-left w-full">{title}</h4>
+      <h4 className="text-2xl font-semibold mb-2 mt-12 text-left w-full">{title}</h4> {/* Add margin to prevent overlap */}
       <div className="text-gray-600 text-left w-full">{description}</div>
     </div>
   );
