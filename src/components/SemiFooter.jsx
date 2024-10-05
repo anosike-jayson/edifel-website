@@ -11,8 +11,8 @@ const servicesList = [
 ];
 
 const contactInfo = {
-  email: 'victoriab@edifeldesigns.com',
-  location: 'Detroit, Chicago, Los Angeles and Laurel.',
+  email: 'info@edifeldesigns.com',
+  location: 'Detroit,MI ; Chicago, IL ;Laurel, MD ; Los Angeles, CA.',
   phone: '+1 734-358-5142'
 };
 
@@ -29,7 +29,7 @@ const Semifooter = () => {
           />
         </div>
           <p className="text-lg text-gray-600 max-w-md">
-            Welcome to Edifel, where innovation meets excellence. Explore our diverse range of offerings and discover how we can help you achieve your goals.
+            Welcome to ediFel, where innovation meets excellence. Explore our diverse range of offerings and discover how we can help you achieve your goals.
           </p>
         </div>
         <div className="flex flex-col space-y-4">
