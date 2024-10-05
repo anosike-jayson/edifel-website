@@ -126,6 +126,12 @@ const NavBar = () => {
             >
               Contact Us
             </Link>
+            <div className="mt-auto border-t border-gray-600" />
+            <img
+              src="/ediFel_Logo.png"
+              alt="Company Logo"
+              className="w-32 h-auto mx-auto my-4"
+            />
           </div>
         </div>
       )}
