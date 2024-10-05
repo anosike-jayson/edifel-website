@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import image1 from '../imgs/Chicago Sky line.jpg';
+import image4 from '../imgs/Chicago Sky line.jpg';
 import image2 from '../imgs/second-slider.jpg';
 import image3 from '../imgs/white-slider2.jpg';
-import image4 from '../imgs/white-slide3.jpg';
+import image1 from '../imgs/white-slider1.jpg';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
