@@ -85,7 +85,7 @@ Following the aftermath of the pandemic, and the slow down on the need for comme
         ]
     },
     {
-        image: '/Commercial/Managment/IMG_9086.jpg',
+        image: '/Commercial/Managment/mgt8.jpg',
         description: `The M & M property management office located at 506 Wesley Ave, was a tenant fit-out renovation. ediFel designs was tasked to provide MEP services for the new building layout. <br><br>
 •Size: ~2400 SF. <br><br>
 •Architect: Laura Fehlberg Architects. <br><br>
@@ -95,13 +95,13 @@ Following the aftermath of the pandemic, and the slow down on the need for comme
         title: 'The Management Office ',
         link: '/selectedworks/details',
         relatedImages: [,
-            '/Commercial/Managment/IMG_9066.jpg',
-            '/Commercial/Managment/IMG_9082.jpg',
-            '/Commercial/Managment/IMG_9086.jpg',
-            '/Commercial/Managment/IMG_9090.jpg',
-            '/Commercial/Managment/IMG_9112.jpg',
-            '/Commercial/Managment/IMG_9116.jpg',
-            '/Commercial/Managment/IMG_9254.jpg',
+            '/Commercial/Managment/mgt2.jpg',
+            '/Commercial/Managment/mgt3.jpg',
+            '/Commercial/Managment/mgt4.jpg',
+            '/Commercial/Managment/mgt5.jpg',
+            '/Commercial/Managment/mgt6.jpg',
+            '/Commercial/Managment/mgt7.jpg',
+            '/Commercial/Managment/mgt8.jpg',
         ]
     },
     {
