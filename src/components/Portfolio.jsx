@@ -20,7 +20,7 @@ const portfolioData = [
     },
     {
         image: '/Commercial/WoodShop/IMG_9033.jpg',
-        description: `The Woodshop 
+        description: `
 Following the aftermath of the pandemic, and the slow down on the need for commercial spaces.  Live/work units are hybrid spaces that combine the elements of a residential living with a commercial office space. ediFel designs provide MEP design services with tankless water heaters, Rooftop unit, and exhaust system within the building. <br><br>
 •Size: ~3000 SF. <br><br>
 •Architect: Range Design & Architecture. <br><br>
