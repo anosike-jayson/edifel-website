@@ -23,40 +23,36 @@ const MapComponent = () => {
   ];
 
   return (
-    <div>
-      {/* Navbar with inline styling */}
-      <nav style={{ position: 'relative', zIndex: 10, backgroundColor: 'white', padding: '10px' }}>
-        <h2>My Navbar</h2>
-      </nav>
+    <div className="relative z-0 flex flex justify-center items-start h-full py-8" id="location">
+      {/* Container for Map and Locations */}
+      <div className="w-full max-w-7xl flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+        {/* Map Container */}
+        <div className="  w-full md:w-3/4 h-64 md:h-96">
+          <MapContainer center={[39.8283, -96.5795]} zoom={4} className="h-full w-full rounded-lg shadow-lg">
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+            />
+            {locations.map((location, index) => (
+              <Marker key={index} position={location.position}>
+                <Popup>{location.name}</Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </div>
 
-      {/* Map container with inline z-index */}
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <MapContainer
-          center={[40.6331, -89.3985]}
-          zoom={5}
-          scrollWheelZoom={false}
-          style={{ height: '500px', width: '100%' }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
-          {locations.map((location, index) => (
-            <Marker key={index} position={location.position}>
-              <Popup>{location.name}</Popup>
-            </Marker>
-          ))}
-        </MapContainer>
-      </div>
-
-      {/* Locations List */}
-      <div>
-        <h2>Locations</h2>
-        <ul>
-          {locations.map((location, index) => (
-            <li key={index}>{location.name}</li>
-          ))}
-        </ul>
+        {/* Locations List */}
+        <div className="w-full md:w-1/4 p-4 bg-white rounded-lg">
+          <h3 className="text-lg font-bold mb-4">Locations</h3>
+          <ul className="space-y-2">
+            {locations.map((location, index) => (
+              <li key={index} className="flex items-center">
+                <FaMapMarkerAlt className="mr-2 text-gray-500" />
+                <span>{location.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
