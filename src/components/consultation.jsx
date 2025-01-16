@@ -41,30 +41,6 @@ const Consultation = () => {
 
   return (
     <div className="bg-gray-100 text-gray-700 py-16" ref={sectionRef}>
-      <style jsx>{`
-        @keyframes slideFromLeft {
-          0% {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideFromRight {
-          0% {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-      `}</style>
-
       <div className="container mx-auto px-6 lg:px-8">
         <h1 className="text-4xl lg:text-4xl font-bold mb-4 text-center">
           CONSULTING
@@ -79,10 +55,10 @@ const Consultation = () => {
             <ServiceCard
               image={<Building size={48}  />} // Top-left SVG
               title="Climate Resilience Hubs"
-              description="At ediFel we are PROUD to provide TECHNICAL
-ASSISTANCE on grant applications for projects throughout North America. Our focus is to provide support
-with other team members, ensuring that DISADVANTAGED COMMUNITIES are provided with
-technical knowledge needed to make informed decisions."
+              description={<> At ediFel we are <strong> PROUD </strong> to provide <strong> TECHNICAL
+ </strong> on grant applications for projects throughout North America. Our focus is to provide support
+with other team members, ensuring that <strong> DISADVANTAGED COMMUNITIES </strong> are provided with
+technical knowledge needed to make informed decisions. </>}
             />
           </div>
 
@@ -94,7 +70,11 @@ technical knowledge needed to make informed decisions."
             <ServiceCard
               image={<BarChart size={48} />} // Top-left SVG
               title="Energy Modeling & Life Cycle Cost Analysis"
-              description="We use industry standard computer software to SIMULATE & ANALYZE buildings. This exercise helps clients make decisions about energy consumption."
+              description={
+                <>
+                  We use industry standard computer software to <strong>SIMULATE</strong> & <strong>ANALYZE</strong> buildings. This exercise helps clients make decisions about energy consumption.
+                </>
+              }
               alignLeft={true}
             />
             <div className="bg-white p-6 rounded-lg shadow-md mt-4">
@@ -123,10 +103,10 @@ technical knowledge needed to make informed decisions."
             <ServiceCard
               image={<FileSearch size={48} />} 
               title="Feasibility Study"
-              description="Identifying potential issues and challenges at the
-INITIAL PHASE of acquiring a building is crucial to the
-success of the project down the road. We provide
-PRELIMINARY INVESTIGATION into a building project viability."
+              description={ <> Identifying potential issues and challenges at the 
+<strong> INITIAL PHASE </strong> of acquiring a building is crucial to the
+success of the project down the road. We provide 
+<strong> PRELIMINARY INVESTIGATION </strong> into a building project viability. </>}
               alignLeft={true}
             />
           </div>

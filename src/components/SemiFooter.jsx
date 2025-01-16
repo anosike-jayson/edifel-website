@@ -12,7 +12,7 @@ const servicesList = [
 
 const contactInfo = {
   email: 'info@edifeldesigns.com',
-  location: 'Detroit,MI ; Chicago, IL ;Laurel, MD ; Los Angeles, CA.',
+  location: 'Detroit MI, Chicago IL, Laurel MD, Los Angeles CA.',
   phone: '+1 734-358-5142'
 };
 
